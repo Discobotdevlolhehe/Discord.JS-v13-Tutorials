@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const client = new Discord.Client({ intents: 32767 });
 
 client.on("ready", () => {
-    console.log("Bot is online!")
+    console.log(`logged in as ${client.user.tag}`)
 })
 
 client.on("messageCreate", (message) => {
@@ -44,4 +44,4 @@ client.on("messageCreate", (message) => {
 
 })
 
-client.login("-")
+client.login(processs.env.TOKEN)
